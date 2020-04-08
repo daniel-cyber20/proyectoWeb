@@ -5,7 +5,7 @@
 
 <div class="container">
 
-    seccion para crear
+<h3> <strong>Seccion para Crear</strong></h3>
 
 
     <form action="{{ url ('/cines')}}" method="POST" enctype="multipart/form-data">

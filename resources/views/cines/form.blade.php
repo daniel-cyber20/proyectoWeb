@@ -9,11 +9,13 @@ value="{{isset($cine->Nombre)?$cine->Nombre:''}}">
 <label for "foto">{{'Foto:'}}</label>
 @if(isset($cine ->Foto))
 <br/>
-<img src="  {{ asset('storage').'/'.$cine -> Foto }}" width="200" height="" class="">
+
+
+<img src="  {{ asset('storage').'/'.$cine -> Foto }}" width="200" height="" class="btn btn-success" >
 <br/>
 @endif
 
-<input type="file" name="Foto" id="Foto" value="">
+<input type="file" name="Foto" id="Foto" value="" >
 
 <br/>
 
@@ -27,10 +29,12 @@ value="{{isset($cine->Nombre)?$cine->Nombre:''}}">
 
 <label for "fechaEstreno">{{'Fecha:'}}</label>
 <input type="text" name="FechaEstreno" id="FechaEstreno" value="{{isset($cine->FechaEstreno)?$cine->FechaEstreno:''}}">
-<br/>
-<input type="submit" value  ="{{$Modo=='crear' ? 'agregar empleado':'Modificar empleado'}}"
+
+<br>
+
+<input type="submit" class="btn btn-info" value  ="{{$Modo=='crear' ? 'agregar empleado':'Modificar empleado'}}"
 />
 
+|
 
-
-<a href="{{url ('cines')}}">Regresar</a>
+<a href="{{url ('cines')}}"><strong class="btn btn-primary"> Regresar </strong></a>

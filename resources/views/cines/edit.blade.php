@@ -6,7 +6,7 @@
 
 
 
-seccion para editar
+<h3> <strong>Seccion para editar</strong></h3>
 
 <form action="{{ url('/cines/'.$cine->id) }}"  method="POST" enctype="multipart/form-data">
 {{csrf_field()}}

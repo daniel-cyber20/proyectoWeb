@@ -11,7 +11,11 @@
 {{Session::get('mensaje')  }}
 @endif 
 <br/>   
-<a href="{{url ('cines/create')}}">Agregar Nuevo</a>
+
+
+<a href="{{url ('cines/create')}}" class="btn btn-primary">Agregar Nuevo</a>
+<br>
+
 
 <table class="table table-light">
     <thead class="thead-light">
@@ -37,8 +41,7 @@
     <tr>
         <td>{{$loop -> iteration}}</td>
         <td>
-            <img src="  {{ asset('storage').'/'.$cine -> Foto }}" width="200" height="">
-      
+            <img src="  {{ asset('storage').'/'.$cine -> Foto }}" width="200" height="" >
     
     </td>
         <td>{{ $cine->Nombre }}</td>
@@ -54,13 +57,13 @@
             
         
         
-        | 
+        <br>
 
         <form method="POST" action="{{ url('/cines/'.$cine->id) }}">
         {{csrf_field() }}
 
         {{method_field('DELETE')}}
-        <button type="submit" onclick="return confirm('Borrar?');">  Borrar  </button>
+        <button type="submit" onclick="return confirm('Borrar?');"class="btn btn-danger">  Borrar  </button>
 
 
     </form>
